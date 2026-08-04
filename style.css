@@ -1,0 +1,525 @@
+/* =========================================
+   GOOGLE FONT
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================================
+   CSS VARIABLES
+========================================= */
+:root{
+    --primary:#2563eb;
+    --secondary:#1e3a8a;
+    --accent:#38bdf8;
+
+    --background:#f5f7fb;
+    --card:#ffffff;
+
+    --text:#222;
+    --text-light:#666;
+
+    --shadow:0 10px 25px rgba(0,0,0,.12);
+
+    --radius:15px;
+
+    --transition:.3s ease;
+}
+
+body.dark{
+    --background:#0f172a;
+    --card:#1e293b;
+
+    --text:#f8fafc;
+    --text-light:#cbd5e1;
+
+    --shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+}
+
+/* =========================================
+   IMAGES
+========================================= */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+    border-radius:12px;
+
+}
+
+/* =========================================
+   LINKS
+========================================= */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:linear-gradient(135deg,var(--secondary),var(--primary));
+
+    color:white;
+
+    padding:18px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+header h1{
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+
+}
+
+nav a{
+
+    color:white;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+nav a:hover{
+
+    color:#FFD700;
+
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    color:white;
+
+    padding:40px;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80");
+
+    background-size:cover;
+
+    background-position:center;
+
+    animation:fadeIn 1.5s;
+
+}
+
+.hero h2{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    max-width:700px;
+
+    font-size:22px;
+
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:15px 40px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:50px;
+
+    transition:var(--transition);
+
+    font-weight:600;
+
+}
+
+.btn:hover{
+
+    background:var(--secondary);
+
+    transform:translateY(-5px);
+
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:80px auto;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:40px;
+
+    color:var(--primary);
+
+    margin-bottom:40px;
+
+}
+/* =========================================
+   CARDS (CSS GRID)
+========================================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+article{
+    background:var(--card);
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+}
+
+article:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(37,99,235,.25);
+}
+
+article h3{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.skill{
+    background:var(--card);
+    padding:20px;
+    border-radius:12px;
+    box-shadow:var(--shadow);
+}
+
+.bar{
+    width:100%;
+    height:10px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:10px;
+}
+
+.fill{
+    height:100%;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+}
+
+.html{width:95%;}
+.css{width:90%;}
+.js{width:80%;}
+.java{width:85%;}
+.python{width:75%;}
+
+/* =========================================
+   PROJECT IMAGES
+========================================= */
+
+.project img{
+    border-radius:15px;
+    margin-bottom:15px;
+    transition:.4s;
+}
+
+.project img:hover{
+    transform:scale(1.05);
+}
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+form{
+    max-width:700px;
+    margin:auto;
+    background:var(--card);
+    padding:35px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+label{
+    display:block;
+    margin:15px 0 8px;
+    font-weight:600;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+    transition:.3s;
+}
+
+input:focus,
+textarea:focus{
+    outline:none;
+    border-color:var(--primary);
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    border:none;
+    border-radius:10px;
+    background:var(--primary);
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:var(--secondary);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+    background:var(--secondary);
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:60px;
+}
+
+/* =========================================
+   DARK MODE BUTTON
+========================================= */
+
+#theme-toggle{
+    background:white;
+    color:var(--primary);
+    padding:10px 15px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    width:auto;
+}
+
+#theme-toggle:hover{
+    transform:rotate(180deg);
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.fade{
+    animation:fadeIn 1s ease;
+}
+
+/* =========================================
+   MOBILE FIRST
+========================================= */
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero h2{
+    font-size:36px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(min-width:768px){
+
+header{
+    flex-direction:row;
+}
+
+nav ul{
+    flex-direction:row;
+}
+
+.hero h2{
+    font-size:48px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+}
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media(min-width:1024px){
+
+.hero h2{
+    font-size:60px;
+}
+
+.cards{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.skills{
+    grid-template-columns:repeat(4,1fr);
+}
+
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#eee;
+}
