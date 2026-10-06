@@ -1,204 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About | Pravalika Portfolio</title>
-
-    <meta name="description" content="About Pravalika - Portfolio">
-
+    <meta name="description" content="About Pravalika, a Computer Science Engineering student focused on software development, AI and problem solving.">
+    <title>About | Pravalika</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
-
-<header>
-
-    <h1>Pravalika</h1>
-
-    <nav>
-
-        <ul>
-
-            <li><a href="index.html">Home</a></li>
-
-            <li><a href="about.html">About</a></li>
-
-            <li><a href="projects.html">Projects</a></li>
-
-            <li><a href="contact.html">Contact</a></li>
-
-        </ul>
-
-    </nav>
-
-    <button id="theme-toggle">🌙</button>
-
+<header class="site-header">
+    <a class="brand" href="index.html">Pravalika<span>.</span></a>
+    <nav class="nav"><a href="index.html">Home</a><a class="active" href="about.html">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></nav>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">☾</button>
 </header>
 
-<section class="hero">
-
-    <h2>About Me</h2>
-
-    <p>
-        Learn more about my education, skills and career goals.
-    </p>
-
+<main>
+<section class="page-hero">
+    <p class="eyebrow">ABOUT ME</p>
+    <h1>Curious, practical and always learning.</h1>
+    <p>I'm Pravalika, a B.Tech Computer Science Engineering student interested in software engineering, AI and full-stack development.</p>
 </section>
 
-<section>
-
-    <h2>Who Am I?</h2>
-
-    <div class="cards">
-
-        <article>
-
-            <h3>Introduction</h3>
-
-            <p>
-                Hello! I'm <strong>Pravalika</strong>, a Computer Science Engineering
-                student with a strong interest in Web Development,
-                Artificial Intelligence and Software Development.
-            </p>
-
-        </article>
-
-        <article>
-
-            <h3>Education</h3>
-
-            <p>
-                Bachelor of Technology (B.Tech) in Computer Science Engineering.
-                I enjoy learning programming, web technologies,
-                databases and problem solving.
-            </p>
-
-        </article>
-
-        <article>
-
-            <h3>Interests</h3>
-
-            <p>
-                • Full Stack Development<br>
-                • Java Programming<br>
-                • Python Programming<br>
-                • Artificial Intelligence<br>
-                • UI/UX Design
-            </p>
-
-        </article>
-
+<section class="section about-grid">
+    <div class="about-photo-card"><img src="images/profile.jpg" alt="Pravalika"></div>
+    <div class="about-copy">
+        <p class="eyebrow">MY JOURNEY</p>
+        <h2>Building my foundation for a career in software engineering.</h2>
+        <p>I enjoy learning by building projects and solving programming problems. My current focus is strengthening Java and DSA while developing practical skills in full-stack development, APIs, databases and AI.</p>
+        <p>I'm especially interested in opportunities where I can learn from experienced engineers, contribute to meaningful products and continuously improve my problem-solving skills.</p>
+        <div class="info-grid">
+            <div><strong>Education</strong><span>B.Tech — Computer Science Engineering</span></div>
+            <div><strong>Graduation</strong><span>Expected 2028</span></div>
+            <div><strong>Primary Language</strong><span>Java</span></div>
+            <div><strong>Interests</strong><span>AI · Full Stack · DSA</span></div>
+        </div>
     </div>
-
 </section>
 
-<section>
-
-    <h2>Technical Skills</h2>
-
-    <div class="skills">
-
-        <div class="skill">
-            HTML5
-            <div class="bar">
-                <div class="fill html"></div>
-            </div>
-        </div>
-
-        <div class="skill">
-            CSS3
-            <div class="bar">
-                <div class="fill css"></div>
-            </div>
-        </div>
-
-        <div class="skill">
-            JavaScript
-            <div class="bar">
-                <div class="fill js"></div>
-            </div>
-        </div>
-
-        <div class="skill">
-            Java
-            <div class="bar">
-                <div class="fill java"></div>
-            </div>
-        </div>
-
-        <div class="skill">
-            Python
-            <div class="bar">
-                <div class="fill python"></div>
-            </div>
-        </div>
-
+<section class="section">
+    <div class="section-heading"><p class="eyebrow">CURRENT FOCUS</p><h2>What I'm working on</h2></div>
+    <div class="focus-grid">
+        <article class="skill-card"><span>01</span><h3>Problem Solving</h3><p>Practicing Java and Data Structures to improve coding patterns and interview readiness.</p></article>
+        <article class="skill-card"><span>02</span><h3>Full Stack Development</h3><p>Learning frontend, backend APIs, databases and deployment through practical projects.</p></article>
+        <article class="skill-card"><span>03</span><h3>Artificial Intelligence</h3><p>Building useful AI applications that solve real user problems instead of only experimenting with models.</p></article>
     </div>
-
 </section>
-
-<section>
-
-    <h2>Achievements</h2>
-
-    <div class="cards">
-
-        <article>
-
-            <h3>Responsive Web Design</h3>
-
-            <p>
-                Developed responsive portfolio websites using
-                HTML5, CSS3 and modern web design principles.
-            </p>
-
-        </article>
-
-        <article>
-
-            <h3>Programming</h3>
-
-            <p>
-                Practicing Java, Python and Data Structures to
-                strengthen problem-solving skills.
-            </p>
-
-        </article>
-
-        <article>
-
-            <h3>Projects</h3>
-
-            <p>
-                Built academic projects including a Women's Safety
-                Application and a Personal Portfolio Website.
-            </p>
-
-        </article>
-
-    </div>
-
-</section>
-
-<footer>
-
-    <p>
-
-        © 2026 Pravalika | All Rights Reserved
-
-    </p>
-
-</footer>
-
+</main>
+<footer><p>© 2026 Pravalika. Built with HTML, CSS & JavaScript.</p></footer>
 <script src="script.js"></script>
-
 </body>
-
 </html>

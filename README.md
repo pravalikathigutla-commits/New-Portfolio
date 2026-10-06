@@ -1,2 +1,3 @@
-# New-Portfolio
-Updates of my Portfolio
+# Pravalika — Professional Portfolio
+
+Professional responsive portfolio featuring AI Career Copilot, TechShop and WeatherDashboard.

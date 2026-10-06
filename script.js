@@ -1,59 +1,16 @@
-// Dark Mode
+const themeToggle = document.getElementById("theme-toggle");
+const savedTheme = localStorage.getItem("portfolio-theme");
 
-const themeButton = document.getElementById("theme-toggle");
-
-themeButton.addEventListener("click", () => {
-
-document.body.classList.toggle("dark");
-
-if(document.body.classList.contains("dark")){
-
-themeButton.innerHTML="☀";
-
-}else{
-
-themeButton.innerHTML="🌙";
-
+if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    if (themeToggle) themeToggle.textContent = "☀";
 }
 
-});
-
-
-// Fade Animation
-
-const cards=document.querySelectorAll("article");
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("fade");
-
+if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        const dark = document.body.classList.contains("dark");
+        localStorage.setItem("portfolio-theme", dark ? "dark" : "light");
+        themeToggle.textContent = dark ? "☀" : "☾";
+    });
 }
-
-});
-
-});
-
-cards.forEach(card=>observer.observe(card));
-
-
-// Smooth Scroll
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-
-anchor.addEventListener("click",function(e){
-
-e.preventDefault();
-
-document.querySelector(this.getAttribute("href")).scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-});
-
-});
